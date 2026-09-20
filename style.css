@@ -1,0 +1,102 @@
+/* RESET & PENGATURAN DASAR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HEADER & NAVIGASI */
+.site-header {
+    background-color: #4A3525;
+    color: #fff;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('image/Banner_Kopi.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #D2B48C;
+    color: #222;
+    padding: 10px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c29f70;
+}
