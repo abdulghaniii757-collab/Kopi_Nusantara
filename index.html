@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Nusantara - Kedai Kopi Tradisional & Modern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <h1 class="logo">Kopi Nusantara</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#kalkulator">Kalkulator Pesanan</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#footer">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Banner Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <h2>Nikmati Cita Rasa Kopi Asli Indonesia</h2>
+            <p>Diseduh dari biji kopi pilihan langsung dari petani lokal Nusantara.</p>
+            <a href="#menu" class="btn-primary">Jelajahi Menu</a>
+        </div>
+    </section>
+
+    <!-- Konten Utama -->
+    <main class="container main-content">
+        <!-- Bagian Menu (Tanpa Gambar) -->
+        <section id="menu">
+            <h3 class="section-title">Menu Unggulan Kami</h3>
+            <div class="menu-grid">
+                <!-- Kartu Menu 1 -->
+                <div class="menu-card">
+                    <div class="card-body">
+                        <h4>Kopi Tubruk Gayo</h4>
+                        <p>Kopi hitam tradisional khas Aceh dengan aroma yang kuat dan khas.</p>
+                        <div class="card-footer-info">
+                            <span class="price">Rp 18.000</span>
+                            <button class="btn-like">❤️ <span class="like-count">0</span> Suka</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu Menu 2 -->
+                <div class="menu-card">
+                    <div class="card-body">
+                        <h4>Es Kopi Susu Nusantara</h4>
+                        <p>Perpaduan espresso, fresh milk, dan gula aren asli yang creamy.</p>
+                        <div class="card-footer-info">
+                            <span class="price">Rp 22.000</span>
+                            <button class="btn-like">❤️ <span class="like-count">0</span> Suka</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kartu Menu 3 -->
+                <div class="menu-card">
+                    <div class="card-body">
+                        <h4>Kopi Toraja Robusta</h4>
+                        <p>Kita hadirkan rasa earthy dengan tingkat keasaman yang pas.</p>
+                        <div class="card-footer-info">
+                            <span class="price">Rp 20.000</span>
+                            <button class="btn-like">❤️ <span class="like-count">0</span> Suka</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kalkulator Pesanan -->
+        <section id="kalkulator" class="calc-section">
+            <h3 class="section-title">Kalkulator Pesanan Kilat</h3>
+            <div class="calc-card">
+                <div class="form-group">
+                    <label for="pilihan-menu">Pilih Menu Kopi:</label>
+                    <select id="pilihan-menu" class="form-control">
+                        <option value="18000">Kopi Tubruk Gayo - Rp 18.000</option>
+                        <option value="22000">Es Kopi Susu Nusantara - Rp 22.000</option>
+                        <option value="20000">Kopi Toraja Robusta - Rp 20.000</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="jumlah-pesanan">Jumlah Cangkir:</label>
+                    <input type="number" id="jumlah-pesanan" class="form-control" value="1" min="1">
+                </div>
+                <div class="calc-result">
+                    <h4>Total Pembayaran:</h4>
+                    <p id="total-harga">Rp 18.000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian FAQ (Accordion) -->
+        <section id="faq" class="faq-section">
+            <h3 class="section-title">Pertanyaan yang Sering Diajukan (FAQ)</h3>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">1. Dari mana asal biji kopi yang digunakan Kopi Nusantara?</button>
+                    <div class="faq-answer">
+                        <p>Biji kopi kami langsung didatangkan dari petani lokal pilihan di berbagai daerah di Indonesia, seperti Gayo, Toraja, Flores, dan Bali.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">2. Apakah Kopi Nusantara menyediakan pemesanan secara online?</button>
+                    <div class="faq-answer">
+                        <p>Ya, Anda bisa memesan melalui aplikasi pesan-antar makanan online atau langsung menghubungi nomor WhatsApp kami di bagian kontak.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">3. Apakah tersedia menu non-kopi di kedai ini?</button>
+                    <div class="faq-answer">
+                        <p>Tentu saja! Kami menyediakan berbagai pilihan minuman non-kopi seperti teh rempah, cokelat klasik, dan menu es buah segar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">4. Jam berapa operasional kedai Kopi Nusantara setiap harinya?</button>
+                    <div class="faq-answer">
+                        <p>Kedai kami buka setiap hari mulai pukul 09.00 pagi hingga 22.00 malam WIB.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Kopi Nusantara. Hak Cipta Dilindungi.</p>
+            <p>Jalan Raya Kopi No. 45, Jakarta | Telepon: 0812-3456-7890</p>
+        </div>
+    </footer>
+
+    <!-- jQuery CDN & Script Kustom -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
