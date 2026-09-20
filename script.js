@@ -1,44 +1,57 @@
 $(document).ready(function() {
 
-    // 1. FITUR ACCORDION FAQ
+    // accordion faq
     $('.faq-question').click(function() {
-        var $answer = $(this).next('.faq-answer');
-        $('.faq-answer').not($answer).slideUp(300);
-        $answer.slideToggle(300);
+        var jawaban = $(this).next('.faq-answer');
+        $('.faq-answer').not(jawaban).slideUp(300);
+        jawaban.slideToggle(300);
     });
 
-    // 2. FITUR INTERAKTIF: TOMBOL LIKE COUNTER PADA MENU
+    // like button di menu
     $('.btn-like').click(function() {
-        var $countSpan = $(this).find('.like-count');
-        var currentLikes = parseInt($countSpan.text());
-        var newLikes = currentLikes + 1;
-        $countSpan.text(newLikes);
+        var like = $(this).find('.like-count');
+        var jumlahLike = parseInt(like.text());
+        jumlahLike = jumlahLike + 1;
+        like.text(jumlahLike);
 
         $(this).animate({ fontSize: '0.95rem' }, 100).animate({ fontSize: '0.85rem' }, 100);
     });
 
-    // 3. FITUR INTERAKTIF TAMBAHAN: KALKULATOR HARGA PESANAN
+    // kalkulator harga pesanan
     function hitungTotal() {
-        var hargaSatuan = parseInt($('#pilihan-menu').val()) || 0;
-        var jumlah = parseInt($('#jumlah-pesanan').val()) || 0;
-        
-        // Mencegah nilai minus pada jumlah pesanan
-        if (jumlah < 1) {
-            jumlah = 1;
-            $('#jumlah-pesanan').val(1);
+        var harga = parseInt($('#pilihan-menu').val());
+        if (isNaN(harga)) {
+            harga = 0;
         }
 
-        var total = hargaSatuan * jumlah;
+        var jumlah = $('#jumlah-pesanan').val();
+        jumlah = parseInt(jumlah);
 
-        // Memformat angka ke format mata uang Rupiah
-        var formatRupiah = 'Rp ' + total.toLocaleString('id-ID');
+        if (jumlah < 1 || isNaN(jumlah)) {
+            jumlah = 1;
+        }
 
-        // Menampilkan hasil kalkulasi ke elemen DOM dengan efek fadeIn halus
-        $('#total-harga').hide().text(formatRupiah).fadeIn(200);
+        var total = harga * jumlah;
+        var totalString = total.toString();
+        var hasil = '';
+        var hitung = 0;
+
+        for (var i = totalString.length - 1; i >= 0; i--) {
+            hasil = totalString[i] + hasil;
+            hitung++;
+            if (hitung % 3 == 0 && i != 0) {
+                hasil = '.' + hasil;
+            }
+        }
+
+        $('#total-harga').text('Rp ' + hasil);
     }
 
-    // Menjalankan fungsi hitung saat pilihan menu atau jumlah cangkir diubah
-    $('#pilihan-menu, #jumlah-pesanan').on('change keyup', function() {
+    $('#pilihan-menu').change(function() {
+        hitungTotal();
+    });
+
+    $('#jumlah-pesanan').keyup(function() {
         hitungTotal();
     });
 
